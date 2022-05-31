@@ -7,14 +7,17 @@ function EachProject({ eachpost }) {
   const navigate = useNavigate();
   function joinproj() {
     const token = JSON.parse(localStorage.getItem("data"));
-    if (!eachpost.join.includes(token._id)) {
+    if (
+      !eachpost.join.includes(token._id) &&
+      eachpost.join.length <= eachpost.team
+    ) {
       const joinusers = [...eachpost.join, token._id];
 
       if (token._id == eachpost.userId) {
         console.log("ADmin Cannot join");
       } else {
         axios
-          .put(`http://localhost:3001/api/posts/${eachpost._id}`, {
+          .put(`https://findev-back.herokuapp.com/api/posts/${eachpost._id}`, {
             userId: eachpost.userId,
             join: joinusers,
           })

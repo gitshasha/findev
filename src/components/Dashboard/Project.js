@@ -10,7 +10,7 @@ function Project() {
 
     if (token) {
       axios
-        .get("http://localhost:3001/api/posts/something/1")
+        .get("https://findev-back.herokuapp.com/api/posts/something/1")
         .then((data) => {
           setposts(data.data);
           console.log(data);

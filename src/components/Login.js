@@ -8,7 +8,7 @@ function Login() {
   const navigate = useNavigate();
   function login() {
     axios
-      .post("http://localhost:3001/api/auth/login", {
+      .post("https://findev-back.herokuapp.com/api/auth/login", {
         email: email,
         password: password,
       })

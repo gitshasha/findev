@@ -13,7 +13,7 @@ function AddProject() {
   function submitpost() {
     if (token) {
       axios
-        .post("http://localhost:3001/api/posts", {
+        .post("https://findev-back.herokuapp.com/api/posts", {
           userId: token._id,
           title: title,
           desc: desc,

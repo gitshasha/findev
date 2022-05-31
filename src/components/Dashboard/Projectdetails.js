@@ -11,7 +11,7 @@ function Projectdetails() {
   useEffect(() => {
     if (params) {
       axios
-        .get(`http://localhost:3001/api/posts/${params.id}`)
+        .get(`https://findev-back.herokuapp.com/api/posts/${params.id}`)
         .then((data) => {
           setprojectinfo(data.data);
         })
@@ -39,7 +39,7 @@ function Projectdetails() {
                   } else {
                     axios
                       .put(
-                        `http://localhost:3001/api/posts/${projectinfo._id}`,
+                        `https://findev-back.herokuapp.com/api/posts/${projectinfo._id}`,
                         {
                           userId: projectinfo.userId,
                           join: joinusers,

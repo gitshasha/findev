@@ -18,7 +18,7 @@ function SeparateProject() {
   useEffect(() => {
     if (params) {
       axios
-        .get(`http://localhost:3001/api/posts/${params.id}`)
+        .get(`https://findev-back.herokuapp.com/api/posts/${params.id}`)
         .then((data) => {
           setprojectinfo(data.data);
         })
@@ -46,6 +46,7 @@ function SeparateProject() {
             username={token.username}
             room={projectinfo._id}
           />
+          <div className="chatend"></div>
         </div>
       )}
     </div>

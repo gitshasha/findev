@@ -106,7 +106,7 @@ export default class ProjectForm extends Component {
             const token = JSON.parse(localStorage.getItem("data"));
             if (this.state.commentbody != {}) {
               axios
-                .post("http://localhost:3001/api/answers/", {
+                .post("https://findev-back.herokuapp.com/api/answers/", {
                   content: this.state.commentbody,
                   QuestionId: this.props.QuestionId,
                   UserId: token._id,

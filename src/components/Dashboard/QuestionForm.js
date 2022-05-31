@@ -10,7 +10,7 @@ function QuestionForm() {
   function submitpost() {
     if (token) {
       axios
-        .post("http://localhost:3001/api/questions/", {
+        .post("https://findev-back.herokuapp.com/api/questions/", {
           userId: token._id,
           title: title,
           desc: desc,

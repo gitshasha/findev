@@ -7,7 +7,7 @@ function Question({ eachquest }) {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:3001/api/answers/${eachquest._id}`)
+      .get(`https://findev-back.herokuapp.com/api/answers/${eachquest._id}`)
       .then((data) => {
         setans(data.data.length);
       })

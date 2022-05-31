@@ -17,7 +17,7 @@ function Home() {
       if (params.tagname) {
         axios
           .get(
-            `http://localhost:3001/api/questions/question-tag/${params.tagname}`
+            `https://findev-back.herokuapp.com/api/questions/question-tag/${params.tagname}`
           )
           .then((data) => {
             setallquest(data.data);
@@ -27,7 +27,7 @@ function Home() {
           });
       } else {
         axios
-          .get("http://localhost:3001/api/questions/allquest/1")
+          .get("https://findev-back.herokuapp.com/api/questions/allquest/1")
           .then((data) => {
             console.log(data);
             setallquest(data.data);
@@ -41,7 +41,9 @@ function Home() {
   function submitquest() {
     if (searchquest != "") {
       axios
-        .get(`http://localhost:3001/api/questions/search/${searchquest}`)
+        .get(
+          `https://findev-back.herokuapp.com/questions/search/${searchquest}`
+        )
         .then((data) => {
           console.log(data);
           setallquest(data.data);
@@ -51,7 +53,7 @@ function Home() {
         });
     } else {
       axios
-        .get("http://localhost:3001/api/questions/allquest/1")
+        .get("https://findev-back.herokuapp.com/questions/allquest/1")
         .then((data) => {
           console.log(data);
           setallquest(data.data);
