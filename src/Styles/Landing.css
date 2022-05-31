@@ -1,0 +1,48 @@
+.nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.land {
+  background-color: #2f303a;
+  font-family: "Poppins", sans-serif;
+  overflow: hidden;
+  height: 100vh;
+}
+.content {
+  position: absolute;
+  top: 20vh;
+  left: 0;
+  width: 100vw;
+  display: flex;
+  justify-content: space-around;
+}
+.text {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  color: white;
+}
+.text h1 {
+  font-weight: 600;
+  font-size: 2.3em;
+}
+.wrap p {
+  /* color: aqua; */
+  font-size: 1.1em;
+}
+.get {
+  height: 6vh;
+  width: 9vw;
+  border-radius: 10px;
+  font-size: 1em;
+  border: none;
+  font-family: "Poppins", sans-serif;
+  background-color: #88e1e1;
+  font-weight: 600;
+}
+.Auth button {
+  font-weight: 700;
+}

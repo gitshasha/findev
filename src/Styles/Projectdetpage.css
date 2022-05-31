@@ -1,0 +1,23 @@
+.Projectdetpage {
+  display: flex;
+}
+.contmid {
+  height: 100vh;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 85vw;
+  background-color: #191920;
+}
+.midcontentp {
+  height: 50vh;
+  width: 40vw;
+  background-color: #34353b;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}

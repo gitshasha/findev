@@ -1,0 +1,79 @@
+.Comment {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.answermid {
+  display: flex;
+  padding-left: 16vw;
+  flex-direction: column;
+  height: 100%;
+  width: 84vw;
+  background-color: #2f303a;
+  overflow-y: scroll;
+  justify-content: space-around;
+}
+.answermid::-webkit-scrollbar {
+  display: none;
+}
+
+.side {
+  position: fixed;
+  top: 0%;
+}
+.answersearch {
+  height: 10vh;
+  display: flex;
+  padding: 4vh;
+  width: 90%;
+}
+.answersearch input {
+  width: 80%;
+  border-radius: 10px;
+}
+.answerquestion {
+  height: 28vh;
+  width: 70vw;
+  border-radius: 10px;
+  background-color: #3f3f44;
+}
+.answerpart {
+  margin-top: 2vh;
+  min-height: 58vh;
+  width: 70vw;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(32, 33, 33);
+}
+.RichEditor-controls {
+  display: flex;
+  width: 69vw;
+  justify-content: space-around;
+  background-color: rgb(86, 167, 238);
+}
+.RichEditor-controls .RichEditor-activeButton {
+  display: flex;
+}
+.Eachcomment {
+  max-height: 40vh;
+  width: 98%;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(22, 38, 39);
+  margin: 1vh;
+  border-radius: 10px;
+}
+.commentedit {
+  width: 69vw;
+  margin: 1vh;
+  border-radius: 10px;
+  background-color: rgb(173, 165, 155);
+  margin: 2vh;
+  z-index: 10;
+}
+.DraftEditor-editorContainer {
+  width: 69vw;
+}
+.DraftEditor-root {
+  min-height: 50vh;
+}
