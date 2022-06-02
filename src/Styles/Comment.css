@@ -36,6 +36,8 @@
   width: 70vw;
   border-radius: 10px;
   background-color: #3f3f44;
+  color: white;
+  font-size: 1.4em;
 }
 .answerpart {
   margin-top: 2vh;
@@ -55,19 +57,27 @@
 .RichEditor-controls .RichEditor-activeButton {
   display: flex;
 }
-.Eachcomment {
-  max-height: 40vh;
-  width: 98%;
-  background-color: rgb(255, 255, 255);
-  border: 1px solid rgb(22, 38, 39);
+.allthebest {
+  display: flex;
+  flex-direction: column;
   margin: 1vh;
+  border: 1px solid black;
+  border-radius: 10px;
+  min-height: 20vh;
+}
+
+.Eachcomment {
+  width: 98%;
+  color: white;
+  border: 1px solid rgb(22, 38, 39);
+  margin-bottom: 15vh;
   border-radius: 10px;
 }
 .commentedit {
   width: 69vw;
   margin: 1vh;
   border-radius: 10px;
-  background-color: rgb(173, 165, 155);
+  background-color: rgb(255, 255, 255);
   margin: 2vh;
   z-index: 10;
 }
@@ -75,5 +85,29 @@
   width: 69vw;
 }
 .DraftEditor-root {
+  min-height: 20vh;
+}
+.answerid {
+  height: 10vh;
+  width: 20vw;
+  color: white;
+}
+.commentedit .DraftEditor-root {
   min-height: 50vh;
+}
+.submitcomment {
+  height: 5vh;
+  width: 7vw;
+  background-color: #3f3f44;
+  border: none;
+}
+.some {
+  display: flex;
+  flex-direction: column;
+}
+.some button {
+  margin-left: auto;
+  border-radius: 5px;
+  color: white;
+  font-family: "Poppins", sans-serif;
 }

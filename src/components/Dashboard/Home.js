@@ -42,7 +42,7 @@ function Home() {
     if (searchquest != "") {
       axios
         .get(
-          `https://findev-back.herokuapp.com/questions/search/${searchquest}`
+          `https://findev-back.herokuapp.com/api/questions/search/${searchquest}`
         )
         .then((data) => {
           console.log(data);
@@ -53,7 +53,7 @@ function Home() {
         });
     } else {
       axios
-        .get("https://findev-back.herokuapp.com/questions/allquest/1")
+        .get("https://findev-back.herokuapp.com/api/questions/allquest/1")
         .then((data) => {
           console.log(data);
           setallquest(data.data);
@@ -73,6 +73,7 @@ function Home() {
             onChange={(e) => {
               setsearchquest(e.target.value);
             }}
+            placeholder="Search"
             type="text"
           />
           <svg

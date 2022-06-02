@@ -4,18 +4,62 @@ import EachTag from "./EachTag";
 import SideNav from "./SideNav";
 function Tags() {
   const [tagnames, settagnames] = useState([
-    "Python",
-    "Java",
-    "JavaScript",
-    "Loops",
-    "Arrays",
-    "C",
+    {
+      name: "Python",
+      des: "Python is a multi-paradigm, dynamically typed, multi-purpose programming language.",
+    },
+    {
+      name: "Java",
+      des: "Java is a high-level object oriented programming language. Use this tag when you're having problems using or understanding the language itself. ",
+    },
+    {
+      name: "JavaScript",
+      des: "For questions regarding programming in ECMAScript  and its various dialects/implementations. Note JavaScript is NOT the same as Java!",
+    },
+    {
+      name: "C#",
+      des: "C# (pronounced 'see sharp') is a high level, statically typed, multi-paradigm programming language developed by Microsoft. C# code usually targets Microsoft's .",
+    },
+    {
+      name: "HTML",
+      des: "HTML (HyperText Markup Language) is the markup language for creating web pages and other information to be displayed in a web browser. ",
+    },
+    {
+      name: "C",
+      des: "C is a general-purpose programming language used for system programming, libraries, games and cross-platform. ",
+    },
   ]);
-  const justtags = ["python", "java", "javaScript", "loops", "arrays", "c"];
+  const justtags = [
+    {
+      name: "python",
+      des: "Python is a multi-paradigm, dynamically typed, multi-purpose programming language.",
+    },
+    {
+      name: "java",
+      des: "Java is a high-level object oriented programming language. Use this tag when you're having problems using or understanding the language itself. ",
+    },
+    {
+      name: "javascript",
+      des: "For questions regarding programming in ECMAScript  and its various dialects/implementations. Note JavaScript is NOT the same as Java!",
+    },
+    {
+      name: "C#",
+      des: "C# (pronounced 'see sharp') is a high level, statically typed, multi-paradigm programming language developed by Microsoft. C# code usually targets Microsoft's .",
+    },
+    {
+      name: "html",
+      des: "HTML (HyperText Markup Language) is the markup language for creating web pages and other information to be displayed in a web browser. ",
+    },
+    {
+      name: "c",
+      des: "C is a general-purpose programming language used for system programming, libraries, games and cross-platform. ",
+    },
+  ];
   const [taginp, settaginp] = useState("");
   function findtag() {
-    if (taginp.toLowerCase != "" && justtags.includes(taginp.toLowerCase())) {
-      settagnames([taginp]);
+    if (taginp.toLowerCase != "" && justtags.find((x) => x.name === taginp)) {
+      const a = justtags.indexOf(justtags.find((x) => x.name === taginp));
+      settagnames([justtags[a]]);
     } else {
       settagnames(justtags);
     }
@@ -26,14 +70,14 @@ function Tags() {
       <SideNav />
       <div className="tagmidpart">
         <div className="tagsearchquestion">
-          <input type="text" />
+          <input type="text" placeholder="Search" />
         </div>
         <div className="Tagtitle">
           <div className="tagname">Tags</div>
           <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Labore
-            quasi, officia provident dolore nulla possimus impedit corrupti qui!
-            Velit, atque!
+            A tag is a keyword or label that categorizes your question with
+            other, similar questions. Using the right tags makes it easier for
+            others to find and answer your question.
           </p>
         </div>
         <div className="searchtag">
@@ -66,7 +110,7 @@ function Tags() {
         </div>
         <div className="tagspace">
           {tagnames.map((data, ind) => (
-            <EachTag key={ind} tagname={data} />
+            <EachTag key={ind} tagname={data.name} des={data.des} />
           ))}
         </div>
       </div>

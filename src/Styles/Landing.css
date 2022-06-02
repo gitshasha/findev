@@ -4,7 +4,7 @@
   left: 0;
 }
 .land {
-  background-color: #2f303a;
+  background-color: #2d3130;
   font-family: "Poppins", sans-serif;
   overflow: hidden;
   height: 100vh;
@@ -23,25 +23,29 @@
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  color: white;
+  color: rgb(255, 255, 255);
 }
 .text h1 {
   font-weight: 600;
-  font-size: 2.3em;
+  font-size: 2.2em;
 }
 .wrap p {
   /* color: aqua; */
   font-size: 1.1em;
 }
+
 .get {
   height: 6vh;
   width: 9vw;
   border-radius: 10px;
-  font-size: 1em;
+
   border: none;
   font-family: "Poppins", sans-serif;
   background-color: #88e1e1;
-  font-weight: 600;
+}
+.get a {
+  font-size: 1.1em;
+  font-weight: 770;
 }
 .Auth button {
   font-weight: 700;

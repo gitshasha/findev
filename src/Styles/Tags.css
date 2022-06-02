@@ -2,10 +2,12 @@
   width: 85vw;
   height: 96vh;
   display: flex;
+
   flex-direction: column;
   justify-content: space-between;
   background-color: #2f303a;
   padding: 2vh;
+  padding-left: 2vw;
 }
 .tagsearchquestion {
   height: 15vh;
@@ -22,6 +24,7 @@
 }
 .tagspace {
   height: 59vh;
+  width: 80%;
   margin-top: 1vh;
   display: flex;
   flex-wrap: wrap;
@@ -75,5 +78,10 @@
   border: none;
   border-radius: 10px;
   font-family: "Poppins", sans-serif;
+  font-size: 0.7em;
   background-color: #88e1e1;
+}
+
+.eachtag p {
+  font-size: 0.9em;
 }

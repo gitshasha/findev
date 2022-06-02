@@ -17,14 +17,11 @@ function Signup() {
       password === confirmpassword
     ) {
       axios
-        .post(
-          "http://localhost:3001/https://findev-back.herokuapp.com/api/auth/register",
-          {
-            username: username,
-            password: password,
-            email: email,
-          }
-        )
+        .post("https://findev-back.herokuapp.com/api/auth/register", {
+          username: username,
+          password: password,
+          email: email,
+        })
         .then((data) => {
           localStorage.setItem("data", JSON.stringify(data.data));
           navigate("/home");

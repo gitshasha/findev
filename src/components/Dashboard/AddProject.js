@@ -45,9 +45,6 @@ function AddProject() {
     <div className="Addproject">
       <SideNav />
       <div className="midaddproj">
-        <div className="addprojectsearch">
-          <input type="text" />
-        </div>
         <div className="addprojtitle">Add Project</div>
         <div className="projectform">
           <label>Title</label>

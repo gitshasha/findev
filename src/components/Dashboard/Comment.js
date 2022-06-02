@@ -28,7 +28,7 @@ function Comment() {
   useEffect(() => {
     if (params.id) {
       axios
-        .get(`http://localhost:3001/api/questions/${params.id}`)
+        .get(`https://findev-back.herokuapp.com/api/questions/${params.id}`)
         .then((data) => {
           setquest(data.data);
         })
@@ -37,11 +37,14 @@ function Comment() {
         });
       const ansarray = [];
       axios
-        .get(`http://localhost:3001/api/answers/${params.id}`)
+        .get(`https://findev-back.herokuapp.com/api/answers/${params.id}`)
         .then((data) => {
           console.log(data.data);
           data.data.map((data, ind) => {
-            ansarray.push(JSON.parse(data.content));
+            ansarray.push({
+              content: JSON.parse(data.content),
+              id: data.UserId,
+            });
           });
           setencrypanswers(ansarray);
         })
@@ -50,10 +53,7 @@ function Comment() {
         });
     }
   }, []);
-  encrypanswers &&
-    encrypanswers.map((data, ind) => {
-      console.log(data);
-    });
+  console.log(encrypanswers);
   return (
     <div className="Comment">
       <div className="side">
@@ -69,16 +69,19 @@ function Comment() {
         <div className="answerpart">
           {encrypanswers &&
             encrypanswers.map((data, ind) => (
-              <div key={ind} className="Eachcomment">
-                <Editor
-                  editorState={EditorState.createWithContent(
-                    convertFromRaw({
-                      blocks: data.blocks,
-                      entityMap: data.entityMap,
-                    })
-                  )}
-                  readOnly={true}
-                />
+              <div key={ind} className="allthebest">
+                <div className="Eachcomment">
+                  <Editor
+                    editorState={EditorState.createWithContent(
+                      convertFromRaw({
+                        blocks: data.content.blocks,
+                        entityMap: data.content.entityMap,
+                      })
+                    )}
+                    readOnly={true}
+                  />
+                </div>
+                <div className="answerid">{data.id}</div>
               </div>
             ))}
         </div>

@@ -118,6 +118,7 @@ export default class ProjectForm extends Component {
                   console.log(err);
                 });
             }
+            this.state.editorState = "";
           }}
         >
           Comment

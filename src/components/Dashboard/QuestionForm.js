@@ -80,7 +80,7 @@ function QuestionForm() {
           </div>
         </div>
       </div>
-      <div className="otherend">
+      <div className="otherendquest">
         <div className="box1">
           <svg
             width="360"

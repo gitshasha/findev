@@ -27,7 +27,7 @@ function Project() {
       <SideNav />
       <div className="promidpart">
         <div className="projectsearch">
-          <input type="text" />
+          <input type="text" placeholder="Search" />
         </div>
         <div className="topproj">
           <h1>Top Projects</h1>
