@@ -2,6 +2,22 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## ScreenShot
+-Dashboard
+![Dashboard](https://github.com/gitshasha/findev/blob/master/Screenshot%202024-09-22%20231345.png)
+
+-Questions
+![Questions](https://github.com/gitshasha/findev/blob/master/sc-4.png)
+
+-Tags
+![Tags](https://github.com/gitshasha/findev/blob/master/scr-2.png)
+
+-Projects
+![Projects](https://github.com/gitshasha/findev/blob/master/sr-5.png)
+
+-Add Project
+![Projects](https://github.com/gitshasha/findev/blob/master/ss-3.png)
+
 ## Available Scripts
 
 In the project directory, you can run:
@@ -39,21 +55,7 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## ScreenShot
--Dashboard
-![Dashboard](https://github.com/gitshasha/findev/blob/master/Screenshot%202024-09-22%20231345.png)
 
--Questions
-![Questions](https://github.com/gitshasha/findev/blob/master/sc-4.png)
-
--Tags
-![Tags](https://github.com/gitshasha/findev/blob/master/scr-2.png)
-
--Projects
-![Projects](https://github.com/gitshasha/findev/blob/master/sr-5.png)
-
--Add Project
-![Projects](https://github.com/gitshasha/findev/blob/master/ss-3.png)
 
 ## Learn More
 
